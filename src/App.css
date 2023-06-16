@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+body{
+    background-color: rgb(50, 50, 105);
+    color: #e2e2e2;
+}
+*{
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main{
+    max-width: 300px;
+    margin: 50px auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form{
+    border: 3px solid #6a6aac;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+}
+form input[type="text"] {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0px 8px;
+    display: block;
+    width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+form button{
+    background-color: rgb(116, 155, 214);
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+div.task{
+    background-color: #6a6aac;
+    border-radius: 10px;
+    padding: 5px 9px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    transition: opacity .3s linear;
+
 }
 
-.App-link {
-  color: #61dafb;
+div.task svg{
+   
+    height: 20px;
+    margin-right: 4px;
+    fill:rgb(123, 169, 238);
+    
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.task.done{
+    opacity: 0.4;
+}
+div.task-name{
+    flex-grow: 1;
+}
+
+div.task span{
+    position: relative;
+    
+}
+div.task span:before{
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: #ddd;
+    position: absolute;
+    top: 12px;
+    transition: width .3s linear;
+}
+
+div.task.done span:before{
+    width: 100%;
+}
+h1{
+    text-align: center;
+    font-weight: lighter;
+}
+
+h2{
+    text-align: center;
+    font-weight: lighter;
+}
+
+h4{
+    text-align: center;
+    font-weight: lighter;
+}
+
+div.checkbox{
+    display: flex;
+    align-items: center;
+}
+button.trash{
+    background: none;
+    border: none;
+    display: flex;
+    cursor: pointer;
+
+}
+
+button.trash svg{
+    fill: #898bd1;
 }
